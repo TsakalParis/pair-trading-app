@@ -1,3 +1,15 @@
+import os
+import subprocess
+
+# Ensure dependencies are installed
+def install_dependencies():
+    try:
+        import yfinance
+    except ModuleNotFoundError:
+        subprocess.run(["pip", "install", "yfinance", "sklearn", "matplotlib", "pykalman", "statsmodels"])
+
+install_dependencies()
+
 import streamlit as st
 import yfinance as yf
 import pandas as pd
