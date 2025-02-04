@@ -3,6 +3,6 @@ yfinance
 pandas
 matplotlib
 numpy
-sklearn
+scikit-learn
 pykalman
 statsmodels
