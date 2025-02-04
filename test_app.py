@@ -6,7 +6,7 @@ def install_dependencies():
     try:
         import yfinance
     except ModuleNotFoundError:
-        subprocess.run(["pip", "install", "yfinance", "sklearn", "matplotlib", "pykalman", "statsmodels"])
+        subprocess.run(["pip", "install", "yfinance", "scikit-learn", "matplotlib", "pykalman", "statsmodels"])
 
 install_dependencies()
 
