@@ -38,7 +38,7 @@ def get_stock_data(tickers, start_date, end_date):
             raise ValueError(f"Tickers not found: {missing_tickers}")
 
         # Check Adjusted Close availability
-        if 'Adj Close' not in data.columns.levels[1]:
+        if 'Close' not in data.columns.levels[1]:
             available_tickers = []
             for t in tickers:
                 try:
@@ -48,11 +48,11 @@ def get_stock_data(tickers, start_date, end_date):
                     continue
             msg = "Adjusted Close prices not available for requested tickers.\n"
             if available_tickers:
-                msg += f"Close prices available for: {', '.join(available_tickers)}"
+                msg += f"Adjusted Close prices available for: {', '.join(available_tickers)}"
             raise ValueError(msg)
 
         # Process Adjusted Close data
-        adj_close_data = data.xs('Adj Close', level=1, axis=1)
+        adj_close_data = data.xs('Close', level=1, axis=1)
 
         # Collect date information and validate
         warnings = []
