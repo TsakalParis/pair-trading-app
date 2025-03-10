@@ -856,4 +856,5 @@ if st.session_state.processed_data and 'lookback' in locals():
 st.markdown("""
 **Attention!!! To Change the Assets or the Training Size you need to Refresh the Page**    
 *Note: The program does not save user inputs.*
+*The program's outputs are for entertainment and educational purposes only and should not be considered financial advice*
 """)
