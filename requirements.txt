@@ -1,5 +1,5 @@
 streamlit
-yfinance==0.2.54
+yfinance==0.2.62
 pandas
 matplotlib
 numpy

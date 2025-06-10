@@ -20,6 +20,7 @@ from pykalman import KalmanFilter
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.stattools import coint
 
+@st.cache_data(ttl=86400)  # 24 hours (for daily data)
 def get_stock_data(tickers, start_date, end_date):
     """
     Fetch and validate stock data from Yahoo Finance.
